@@ -10,12 +10,12 @@ async function run() {
     // unlike the create method, you need to use the save method after you create this object using the new keyword
     const user = new User({
       name: "Angel",
-      age: 24,
+      age: 20,
       email: "amejia.foo@gmail.com",
       hobbies: ["Code", "Sleep"],
       address: {
-        street: "Calle 6 - Shangrila",
-        city: "Lima",
+        street: "Sauce Street",
+        city: "Sauce City",
       },
     });
     user.save();

@@ -10,12 +10,12 @@ async function run() {
     // this method creates a document (instance of a model)
     const user = await User.create({
       name: "Angel",
-      age: 24,
+      age: 20,
       email: "amejia.foo@gmail.com",
       hobbies: ["Code", "Sleep"],
       address: {
-        street: "Calle 6 - Shangrila",
-        city: "Lima",
+        street: "Sauce Street",
+        city: "Sauce City",
       },
     });
     console.log(user);

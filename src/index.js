@@ -8,27 +8,21 @@ mongoose.connect("mongodb://localhost/testdb5");
 run();
 
 async function run() {
-  // as final users' input regarding an ODM can cause errors, we can use a try block
+  // we use a try block to ensure the script doesn't blow up if wrong field types are typed
   try {
-    // if we used the new User syntax we would have to do a user.save()
     const user = await User.create({
       name: "Angel",
-      age: 24,
+      age: 20,
       email: "amejia.foo@gmail.com",
       hobbies: ["Code", "Sleep"],
       address: {
-        street: "Calle 6 - Shangrila",
-        city: "Lima",
+        street: "Sauce Street",
+        city: "Sauce City",
       },
     });
 
-    // as mongoose is a ODM, you can treat models as objects in the context of POO to update fields
-    user.name = "Inso";
-
-    // as .save is already an async function, you can just use .then (promise) to ensure it was executed
+    // as save is an async function, you can use the then promise to do something after the user is saved
     await user.save();
-    
-    console.log(user);
   }
   
   catch (e) {
